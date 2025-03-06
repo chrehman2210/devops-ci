@@ -1,6 +1,8 @@
 import sys
 
 def dec_to_hex(decimal):
+    if decimal < 0:
+        raise ValueError("Negative numbers are not allowed.")
     return hex(decimal)[2:].upper()
 
 if __name__ == "__main__":
@@ -16,3 +18,4 @@ if __name__ == "__main__":
     except ValueError:
         print("Error: Invalid input. Please enter a valid integer.")
         sys.exit(1)  # Exit with error
+
